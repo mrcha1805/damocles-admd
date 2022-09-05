@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="/auth/admd/images/icon/favicon.ico">
+    <title>Activate your account</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/auth/admd/script/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/auth/admd/script/css/style-c.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/auth/admd/script/sweetalert2-8.17.4/package/dist/sweetalert2.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/auth/admd/script/font-awesome-4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="../script/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../script/css/style-c.min.css">
+    <link rel="stylesheet" href="../script/sweetalert2-8.17.4/package/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../script/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+</head>
+
+<body class="bg">
+        <!-- <div class="bg"></div> -->
+    <!-- <img src="images/icon/BG.png" alt="" class="bg"> -->
+    <div class="content-xs" id="form-sign">
+    <div class="row mt-5"></div>
+    <div class="row">
+            <label  class="h-contento mt-3 mx-auto" id="message"></label>
+            <!-- <label  class="h-mute mx-auto" id="checkHttpCode">Please create a new account. Click the "Continue" <br>for new customers to apply.</label> -->
+        <!-- <label  class="h-content mt-5 mx-auto" id="checkHttpCode"><%= code %> <%= message %></label> -->
+    </div>
+    <div class="row justify-content-md-center">
+            <div class="col-4 mx-auto mt-3">
+                <button type="button" class="btn btn-block btn-sgl-success rounded-0 text-lg">CONTINUE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/auth/admd/script/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="/auth/admd/script/js/popper.min.js" crossorigin="anonymous"></script>
+    <script src="/auth/admd/script/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="/auth/admd/script/sweetalert2-8.17.4/package/dist/sweetalert2.min.js" crossorigin="anonymous"></script>
+    <script src="/auth/admd/script/js/facebookLogin.js" crossorigin="anonymous"></script>
+    <script src="/auth/admd/script/js/lineLogin.js" crossorigin="anonymous"></script>
+    <script src="/auth/admd/script/js/googleLogin.js" crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            const code = '<%= code %>' || '500'
+            $.getJSON('/auth/admd/script/js/error.const.json', function (data) {
+                console.log('data: ', data);
+                // default
+                $('#message').text('ขออภัย ระบบไม่สามารถให้บริการ ได้ขณะนี้กรุณาเข้าใช้บริการใหม่ภายหลัง')
+                if (data) {
+                    for (d of data) {
+                        if (code === d.code) {
+                            $('#message').text(d.message)
+                        }
+                    }
+                }
+            });
+        })
+    </script>
+
+    <!-- <script src="../script/js/jquery-3.3.1.min.js"></script>
+    <script src="../script/js/popper.min.js" ></script>
+    <script src="../script/js/bootstrap.min.js" ></script>
+    <script src="../script/sweetalert2-8.17.4/package/dist/sweetalert2.min.js" ></script>
+    <script src="../script/js/facebookLogin.js" ></script>
+    <script src="../script/js/lineLogin.js" ></script>
+    <script src="../script/js/googleLogin.js"></script> -->
+    <!-- Optional JavaScript -->
+    
+</body>
+
+
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="/auth/admd/images/icon/favicon.ico">
+    <title>ADMDV3</title>
+    <!-- Bootstrap CSS -->
+    <!-- css -->
+    <link rel="stylesheet" href="/auth/admd/script/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/auth/admd/script/css/style-c.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/auth/admd/script/sweetalert2-8.17.4/package/dist/sweetalert2.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/auth/admd/script/font-awesome-4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+
+
+    <!-- <link rel="stylesheet" href="script/css/bootstrap.min.css">
+    <link rel="stylesheet" href="script/css/style-c.min.css">
+    <link rel="stylesheet" href="script/sweetalert2-8.17.4/package/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="script/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+</head>
+
+<body class="bg">
+    <!-- <div class="bg"></div> -->
+    <!-- <img src="images/icon/BG.png" alt="" class="bg"> -->
+
+    <!-- START Login from -->
+    <div class="content" style="display: block" id="form-sign">
+        <form action="" id="accept_tc_form" method="" autocomplete="off">
+            <div class="row justify-content-md-center">
+                <label class="h-content mx-auto mt-4" >Term and condition update</label>
+            </div>
+            <div class="row justify-content-md-center">
+                <label class="h-mute mx-auto ">Please read this <a href="<%= conditionURL %>" target="_blank" style="text-decoration:none;font-size: small;">Link</a></label>
+            </div>
+            <div>
+                <div class="col-10 container" style="padding-top: 2em;">
+                    <div id="error_content" class="row form-group d-none" style="justify-content: center;color: red !important; margin-bottom: 5px; text-align:center"></div>
+                    <div class="row form-group" style="justify-content: center;">
+                        <div class="col-5">
+                            <button id="btn_accept" onclick="accept_TC('<%= policy %>', '<%= type %>')" type="button"
+                                class="btn btn-block btn-sgl-success rounded-0 text-lg">Accept</button>
+                        </div>
+                        <div class="col-5">
+                            <button id="btn_decline" onclick="decline_TC('<%= redirect_uri %>', '<%= state %>')" type="button"
+                                class="btn btn-block btn-sgl-success rounded-0 text-lg">Decline</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+          <div style="height: 1rem;"></div>
+          <input type="hidden" id="loginType" name="loginType" value="<%= type %>">
+        </form>
+    </div>
+ 
+    <script src="/auth/admd/script/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="/auth/admd/script/js/popper.min.js" crossorigin="anonymous"></script>
+    <script src="/auth/admd/script/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="/auth/admd/script/js/emailpassword.js" crossorigin="anonymous"></script>
+    <script src="/auth/admd/script/sweetalert2-8.17.4/package/dist/sweetalert2.min.js" crossorigin="anonymous"></script>
+
+    <script>
+       $(document).ready(function () {
+         
+        })
+
+    </script>
+</body>
+
+</html>

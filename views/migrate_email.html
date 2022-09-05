@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="/auth/admd/images/icon/favicon.ico">
+    <title>ADMDV3</title>
+    <!-- Bootstrap CSS -->
+    <!-- css -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/auth/admd/script/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/auth/admd/script/css/style-c.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/auth/admd/script/sweetalert2-8.17.4/package/dist/sweetalert2.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/auth/admd/script/font-awesome-4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+
+
+    <!-- <link rel="stylesheet" href="script/css/bootstrap.min.css">
+    <link rel="stylesheet" href="script/css/style-c.min.css">
+    <link rel="stylesheet" href="script/sweetalert2-8.17.4/package/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="script/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+</head>
+
+<body class="bg">
+    <div class="content-s" id="display-migrate" style="display: block;">
+
+            <div class="row">
+                <label class="h-content mx-auto mt-4" style="text-align: left; margin: 2% 7% 2% 7% !important">
+                    We are currently upgrade to the new platform, for strong security please reset your password.
+                </label>
+            </div>
+
+            <form action="" id="migrate" method="post" target="_self">
+            <div class="row">
+                <div class="form-group col-11 mx-auto mt-3">
+                    <input type="text" name="username" id="username" class="form-control rounded-0 mx-auto"
+                        style="text-align: center;" value="<%= publicId %>" disabled>
+                </div>
+            </div>
+            <div class="row justify-content-md-center mt-3">
+                <div class="col-3 mx-auto"></div>
+                <div class="col-3 mx-auto">
+                    <button id="btn_cancel" type="button" class="btn btn-block btn-sgl-success rounded-0 text-lg"
+                        onclick="cancelMigrate('<%= redirectURI %>', '<%= state %>')">CANCEL
+                    </button>
+                </div>
+                <div class="col-3 mx-auto">
+                    <button id="btn-send-mail-migrate" type="button" class="btn btn-block btn-sgl-success rounded-0 text-lg"
+                        onclick="sendEmailMigrate('<%= policy %>', '<%= hasRedirectByTemplate %>');">SUBMIT
+                    </button>
+                </div>
+                <div class="col-3 mx-auto"></div>
+            </div>
+        </form>
+    </div>
+    <!-- END Forgot from -->
+
+    <!-- START Register from -->
+    <!-- END Register from -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/auth/admd/script/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="/auth/admd/script/js/popper.min.js" crossorigin="anonymous"></script>
+    <script src="/auth/admd/script/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <!-- <script src="/auth/admd/script/js/emailpassword.js" crossorigin="anonymous"></script> -->
+    <script src="/auth/admd/script/sweetalert2-8.17.4/package/dist/sweetalert2.min.js" crossorigin="anonymous"></script>
+   
+
+    <!-- <script src="script/js/jquery-3.3.1.min.js"></script>
+    <script src="script/js/popper.min.js" ></script>
+    <script src="script/js/bootstrap.min.js" ></script>
+    <script src="script/js/emailpassword.js" ></script>
+    <script src="script/sweetalert2-8.17.4/package/dist/sweetalert2.min.js" ></script>
+    <script src="script/js/facebookLogin.js" ></script>
+    <script src="script/js/lineLogin.js" ></script>
+    <script src="script/js/googleLogin.js"></script> -->
+    <script>
+        $(document).ready(function () {
+            
+        })
+    </script>
+</body>
+
+</html>
