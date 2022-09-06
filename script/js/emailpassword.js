@@ -1,6 +1,6 @@
 function gohome() {
-    window.location.href="https://iot-authv3.ais.co.th/auth/v3.1/oauth/authorize?response_type=code&client_id=dD2Xf4IsypVi86cal%2FVRJbCrw3kUMZe9JgjuHyZT7rHXBdd%2F4WHyaw%3D%3D&scope=profile&redirect_uri=https://www.ais.co.th/#"
-    
+    window.location.href = "https://iot-authv3.ais.co.th/auth/v3.1/oauth/authorize?response_type=code&client_id=dD2Xf4IsypVi86cal%2FVRJbCrw3kUMZe9JgjuHyZT7rHXBdd%2F4WHyaw%3D%3D&scope=profile&redirect_uri=https://www.ais.co.th/#"
+
 }
 
 function getForm(state) {
@@ -139,13 +139,13 @@ function pwdRule(pwd) {
 //     });
 
 var mouseClick = false;
-       
-$(".toggle-password").on("click ", function(){
+
+$(".toggle-password").on("click ", function () {
     $(this).toggleClass("fa-eye fa-eye-slash");
     var input = $($(this).attr("toggle"));
     console.log('>>>>', input.attr("type"))
-    if(mouseClick == false) input.attr("type", "text");
-    if(mouseClick == true) input.attr("type", "password");
+    if (mouseClick == false) input.attr("type", "text");
+    if (mouseClick == true) input.attr("type", "password");
     mouseClick = !mouseClick;
 });
 
@@ -222,14 +222,14 @@ function sign_in(policy, isRdr) {
                 },
                 error: function (error) {
                     //If Auth failed more than or equal to 3 times.
-                    
+
                     if (count >= 2) {
                         Swal.fire({
                             imageUrl: "/auth/admd/images/ic-alert-142-px.svg",
-                            html:'<br><labal class="h-content">Wrong E-mail or Password</labal><br><labal class="h-mute">Please check your Email or Password. If you can\'t remember your email or password, you can go to the</label> <a href="#" onClick="getForm(\'forgot\')" >forgot password </a><label class="h-mute">page</label>',
+                            html: '<br><labal class="h-content">Wrong E-mail or Password</labal><br><labal class="h-mute">Please check your Email or Password. If you can\'t remember your email or password, you can go to the</label> <a href="#" onClick="getForm(\'forgot\')" >forgot password </a><label class="h-mute">page</label>',
                             customClass: {
                                 confirmButton: 'button-modal',
-                              },
+                            },
                             confirmButtonColor: '#0e7678',
                             cancelButtonColor: '#d33',
                             confirmButtonText: 'CLOSE',
@@ -250,7 +250,7 @@ function sign_in(policy, isRdr) {
                             html: '<br><labal class="h-content">Wrong E-mail or Password</labal><br><labal class="h-mute">Please check your Email or Password.</labal>',
                             customClass: {
                                 confirmButton: 'button-modal',
-                              },
+                            },
                             confirmButtonColor: '#0e7678',
                             cancelButtonColor: '#d33',
                             confirmButtonText: 'CLOSE',
@@ -306,10 +306,10 @@ function btnLoginDoneCheck() {
 
 if (susername) {
     susername.addEventListener("keyup", function (event) {
-        if(susername.value != ""){
+        if (susername.value != "") {
             $('#textusername').addClass('upText')
-        }else{
-            $('#textusername').removeClass('upText')  
+        } else {
+            $('#textusername').removeClass('upText')
         }
         $('#susernameCheck').addClass('d-none')
         if (!susername.validity.valid) {
@@ -327,10 +327,10 @@ if (susername) {
 
 if (spassword) {
     spassword.addEventListener("keyup", function (event) {
-        if(spassword.value != ""){
+        if (spassword.value != "") {
             $('#textspassword').addClass('upText')
-        }else{
-            $('#textspassword').removeClass('upText')  
+        } else {
+            $('#textspassword').removeClass('upText')
         }
         if (event.getModifierState("CapsLock")) {
             $('#spassword').addClass('glossyBtn')
@@ -414,7 +414,7 @@ function sign_up(policy, isRdr) {
                         html: '<br><labal class="h-content">Something Wrong</labal><br><labal class="h-mute">Please try again.</labal>',
                         customClass: {
                             confirmButton: 'button-modal',
-                        },  
+                        },
                         confirmButtonColor: '#0e7678',
                         confirmButtonText: 'CLOSE',
                         allowOutsideClick: false
@@ -462,12 +462,12 @@ function sign_up(policy, isRdr) {
 
 function checkPublicID(sessionString, clientID) {
     rusernameCanUse = true;
-                        $('#rusername').addClass("is-valid")
-                        $('#rusername').removeClass('is-invalid')
-                        $('#remail').val($('#rusername').val())
-                        $('#rusernameCheck').addClass('d-none')
-                        btnSignupDoneCheck()
-                        return
+    $('#rusername').addClass("is-valid")
+    $('#rusername').removeClass('is-invalid')
+    $('#remail').val($('#rusername').val())
+    $('#rusernameCheck').addClass('d-none')
+    btnSignupDoneCheck()
+    return
     // *************** //
     // TODO: Call API for Check public ID
     new Promise(function (resolve, reject) {
@@ -480,7 +480,7 @@ function checkPublicID(sessionString, clientID) {
         if (document.getElementById("rusername").validity.valid) {
             $.ajax({
                 // url:url,
-                url : url,
+                url: url,
                 type: 'GET',
                 success: function (result) {
                     if (Object.keys(result) == 0) {
@@ -503,7 +503,7 @@ function checkPublicID(sessionString, clientID) {
                 error: function (jqXHR, textStatus, errorThrown) {
                     // console.error('error: ', error)
                     var err = eval("(" + jqXHR.responseText + ")");
-       
+
                     if (err.error == "data_exists") {
                         rusernameCanUse = false;
                         $('#rusername').removeClass('is-valid')
@@ -529,9 +529,9 @@ function checkPublicID(sessionString, clientID) {
 // *************** //
 if (tc) {
     tc.addEventListener("change", function (event) {
-        if(event.target.checked){
+        if (event.target.checked) {
             is_tc_accept = true
-        }else{
+        } else {
             is_tc_accept = false
         }
         btnSignupDoneCheck()
@@ -576,10 +576,10 @@ function btnSignupDoneCheck() {
 
 if (fname) {
     fname.addEventListener("keyup", function (event) {
-        if(fname.value != ""){
+        if (fname.value != "") {
             $('#textfname').addClass('upText')
-        }else{
-            $('#textfname').removeClass('upText')  
+        } else {
+            $('#textfname').removeClass('upText')
         }
         if (!fname.validity.valid) {
             $('#fnameMsg').removeClass('d-none')
@@ -596,10 +596,10 @@ if (fname) {
 
 if (lname) {
     lname.addEventListener("keyup", function (event) {
-        if(lname.value != ""){
+        if (lname.value != "") {
             $('#textlname').addClass('upText')
-        }else{
-            $('#textlname').removeClass('upText')  
+        } else {
+            $('#textlname').removeClass('upText')
         }
         if (!lname.validity.valid) {
             $('#lnameMsg').removeClass('d-none')
@@ -616,10 +616,10 @@ if (lname) {
 
 if (rusername) {
     rusername.addEventListener("keyup", function (event) {
-        if(rusername.value != ""){
+        if (rusername.value != "") {
             $('#textrusername').addClass('upText')
-        }else{
-            $('#textrusername').removeClass('upText')  
+        } else {
+            $('#textrusername').removeClass('upText')
         }
         if (!rusername.validity.valid || rusername.value == null || rusername.value == "") {
             $('#rusernameCheck').addClass('d-none')
@@ -638,13 +638,13 @@ if (rusername) {
 var isCaps = false
 if (rpassword) {
     rpassword.addEventListener("keyup", function (event) {
-        if(rpassword.value != ""){
+        if (rpassword.value != "") {
             $('#textrpassword').addClass('upText')
-        }else{
-            $('#textrpassword').removeClass('upText')  
+        } else {
+            $('#textrpassword').removeClass('upText')
         }
-        if(event.getModifierState("CapsLock")) {
-            if (isCaps == false){
+        if (event.getModifierState("CapsLock")) {
+            if (isCaps == false) {
                 $('#rpassword').addClass('glossyBtn')
                 isCaps = true;
             }
@@ -677,13 +677,13 @@ if (rpassword) {
 
 if (rconfirm_password) {
     rconfirm_password.addEventListener("keyup", function (event) {
-        if(rconfirm_password.value != ""){
+        if (rconfirm_password.value != "") {
             $('#textrconfirm_password').addClass('upText')
-        }else{
-            $('#textrconfirm_password').removeClass('upText')  
+        } else {
+            $('#textrconfirm_password').removeClass('upText')
         }
-        if(event.getModifierState("CapsLock")) {
-            if (isCaps == false){
+        if (event.getModifierState("CapsLock")) {
+            if (isCaps == false) {
                 $('#rconfirm_password').addClass('glossyBtn')
                 isCaps = true;
             }
@@ -705,7 +705,7 @@ if (rconfirm_password) {
     })
 }
 
-if(checkTC) {
+if (checkTC) {
     console.log('checkbox', checkTC.value)
 }
 
@@ -726,7 +726,7 @@ function forgot(policy, isRdr) {
         // console.log("policy url", url)
         if (isRdr === 'false') {
             document.getElementById('forgot').action = url
-            document.forms['forgot'].submit()   
+            document.forms['forgot'].submit()
         } else {
             resolve(url)
             console.log("username", document.getElementById('fusername').value.toLowerCase())
@@ -741,11 +741,11 @@ function forgot(policy, isRdr) {
                 recode: recode.value ? recode.value : undefined
             },
             success: function (result) {
-                console.log("httpcode",result)
+                console.log("httpcode", result)
                 document.body.innerHTML = result
             },
             error: function (error) {
-                console.log("httpcode",error.status)
+                console.log("httpcode", error.status)
                 // if(error.status == 0){
                 //     $("#checkHttpCode").text("asdf")
                 // }
@@ -755,7 +755,7 @@ function forgot(policy, isRdr) {
                         html: '<br><labal class="h-content">Email is wrong</labal><br><labal class="h-mute">Please check your Email.</labal>',
                         customClass: {
                             confirmButton: 'button-modal',
-                        },  
+                        },
                         confirmButtonColor: '#0e7678',
                         confirmButtonText: 'CLOSE',
                         allowOutsideClick: false
@@ -775,7 +775,7 @@ function forgot(policy, isRdr) {
                         html: '<br><labal class="h-content">Something Wrong</labal><br><labal class="h-mute">Please try again.</labal>',
                         customClass: {
                             confirmButton: 'button-modal',
-                        }, 
+                        },
                         confirmButtonColor: '#0e7678',
                         confirmButtonText: 'Close',
                         allowOutsideClick: false
@@ -806,10 +806,10 @@ function btnForgotPasswordDoneCheck() {
 
 if (fusername) {
     fusername.addEventListener("keyup", function (event) {
-        if(fusername.value != ""){
+        if (fusername.value != "") {
             $('#textfusername').addClass('upText')
-        }else{
-            $('#textfusername').removeClass('upText')  
+        } else {
+            $('#textfusername').removeClass('upText')
         }
         if (!fusername.validity.valid) {
             $('#fusernameCheck').removeClass('d-none')
@@ -884,30 +884,30 @@ if (confirm_password) {
 
     })
 }
-function clicksusername (){
+function clicksusername() {
     $('#susername').focus()
-        
+
 }
-function clickspassword (){
-    $('#spassword').focus()    
+function clickspassword() {
+    $('#spassword').focus()
 }
-function clickfusername (){
-    $('#fusername').focus()    
+function clickfusername() {
+    $('#fusername').focus()
 }
-function clickfname (){
-    $('#fname').focus()    
+function clickfname() {
+    $('#fname').focus()
 }
-function clicklname (){
-    $('#lname').focus()    
+function clicklname() {
+    $('#lname').focus()
 }
-function clickrusername (){
-    $('#rusername').focus()    
+function clickrusername() {
+    $('#rusername').focus()
 }
-function clickspan (){
-    $('#rpassword').focus()    
+function clickspan() {
+    $('#rpassword').focus()
 }
-function clickspan1 (){
-    $('#rconfirm_password').focus()  
+function clickspan1() {
+    $('#rconfirm_password').focus()
 }
 
 function accept_TC(policy, type) {
@@ -915,19 +915,19 @@ function accept_TC(policy, type) {
     new Promise(function (resolve, reject) {
         const subSession = policy.split('_')
         let url
-        switch(type){
+        switch (type) {
             case 'email_password':
                 url = window.location.origin + `/auth/v3.1/login?type=email_password&action=tc&policy=${subSession[0]}&sid=${subSession[1]}&rtid=${subSession[2]}&tid=${subSession[3]}`
-            break
+                break
             case 'google':
-                url = window.location.origin + `/auth/v3.1/login/`+type+`?action=tc&policy=${subSession[0]}&sid=${subSession[1]}&rtid=${subSession[2]}&tid=${subSession[3]}`
-            break
+                url = window.location.origin + `/auth/v3.1/login/` + type + `?action=tc&policy=${subSession[0]}&sid=${subSession[1]}&rtid=${subSession[2]}&tid=${subSession[3]}`
+                break
             case 'facebook':
-                url = window.location.origin + `/auth/v3.1/login/`+type+`?action=tc&policy=${subSession[0]}&sid=${subSession[1]}&rtid=${subSession[2]}&tid=${subSession[3]}`
-            break
+                url = window.location.origin + `/auth/v3.1/login/` + type + `?action=tc&policy=${subSession[0]}&sid=${subSession[1]}&rtid=${subSession[2]}&tid=${subSession[3]}`
+                break
             case 'line':
-                url = window.location.origin + `/auth/v3.1/login/`+type+`?action=tc&policy=${subSession[0]}&sid=${subSession[1]}&rtid=${subSession[2]}&tid=${subSession[3]}`
-            break
+                url = window.location.origin + `/auth/v3.1/login/` + type + `?action=tc&policy=${subSession[0]}&sid=${subSession[1]}&rtid=${subSession[2]}&tid=${subSession[3]}`
+                break
             default: break
         }
         resolve(url)
@@ -953,7 +953,8 @@ function accept_TC(policy, type) {
                             window.location = res.redirect_uri + '?code=' + res.code + (res.state ? '&state=' + res.state : '')
                         }
                     }
-                }},
+                }
+            },
             error: function (error) {
                 error.status = error.status ? JSON.stringify(error.status) : "500"
                 if (error.responseJSON) {
@@ -976,7 +977,7 @@ function accept_TC(policy, type) {
 }
 
 function decline_TC(redirect_uri, state) {
-    window.location = redirect_uri + (state? ('?state=' + state + '&error=user_denied') : '?error=user_denied' )
+    window.location = redirect_uri + (state ? ('?state=' + state + '&error=user_denied') : '?error=user_denied')
 }
 
 function sendEmailMigrate(policy, isRdr) {
@@ -1001,20 +1002,20 @@ function sendEmailMigrate(policy, isRdr) {
                 username: document.getElementById('username').value.toLowerCase(),
             },
             success: function (result) {
-                console.log("httpcode",result)
+                console.log("httpcode", result)
                 document.body.innerHTML = result
             },
             error: function (error) {
                 document.getElementById('btn-send-mail-migrate').removeAttribute('disabled')
                 document.getElementById('btn_cancel').removeAttribute('disabled')
-                console.log("httpcode",error.status)
+                console.log("httpcode", error.status)
                 if (error.responseJSON && error.responseJSON.error === 'invalid_user_or_password') {
                     Swal.fire({
                         type: 'error',
                         html: '<br><labal class="h-content">Email is wrong</labal><br><labal class="h-mute">Please check your Email.</labal>',
                         customClass: {
                             confirmButton: 'button-modal',
-                        },  
+                        },
                         confirmButtonColor: '#0e7678',
                         confirmButtonText: 'CLOSE',
                         allowOutsideClick: false
@@ -1033,7 +1034,7 @@ function sendEmailMigrate(policy, isRdr) {
                         html: '<br><labal class="h-content">Something Wrong</labal><br><labal class="h-mute">Please try again.</labal>',
                         customClass: {
                             confirmButton: 'button-modal',
-                        }, 
+                        },
                         confirmButtonColor: '#0e7678',
                         confirmButtonText: 'Close',
                         allowOutsideClick: false
@@ -1052,6 +1053,6 @@ function sendEmailMigrate(policy, isRdr) {
     // End API for Forgot password
     // *************** //
 }
-function cancelMigrate(rdr_url, state){
+function cancelMigrate(rdr_url, state) {
     window.location = rdr_url + (state ? '?state=' + state : '') + '&error=user_denied'
 }

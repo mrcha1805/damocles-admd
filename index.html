@@ -14,52 +14,63 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/script/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/script/css/style-c.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/script/css/login.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/script/sweetalert2-8.17.4/package/dist/sweetalert2.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/script/font-awesome-4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
 
 
-    <!-- <link rel="stylesheet" href="script/css/bootstrap.min.css">
-    <link rel="stylesheet" href="script/css/style-c.min.css">
-    <link rel="stylesheet" href="script/sweetalert2-8.17.4/package/dist/sweetalert2.min.css">
-    <link rel="stylesheet" href="script/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+
 </head>
 
-<body class="bg">
-    <!-- <div class="bg"></div> -->
-    <!-- <img src="images/icon/BG.png" alt="" class="bg"> -->
+<body>
+
 
     <!-- START Login from -->
-    <div class="content" style="display: block" id="form-sign">
-        <form action="" id="login" method="post" autocomplete="off">
-            <div class="row justify-content-md-center">
-                <label class="h-content mx-auto mt-4">Welcome</label>
+
+    <div class="content-login" style="display: block" id="form-sign">
+        <div class="nav-logo ">
+            <img class="login-logo" src="/images/loginDI/login-logo.svg">
+
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-4" style="text-align: center;">
+                <img class="damocles-logo" src="/images/loginDI/damocles-logo.svg">
             </div>
-            <div class="row justify-content-md-center">
-                <label class="h-mute mx-auto ">Log in to your account to continue</label>
-            </div>
+            <div class="col-5 col-login mt-4 ">
+                <form action="" id="login" method="post" autocomplete="off">
+                    <div class="row justify-content-md-center">
+                        <label class="header1  mx-auto mt-4">Welcome to</label>
+
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <label class="header2 mx-auto">Actionable <span style="color:#491DC5">Insight</span></label>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <label class="header3 mx-auto">Login to continue to customer insight data.</label>
+                    </div>
 
 
-            <% for (const channel of appChannels) { %>
-                <% if ('email_password' in channel) { %>
 
                     <div class="row justify-content-md-center">
-                        <div class="form-group col-10 mx-auto mt-3">
-                            <input type="email" name="username" id="susername" class="form-control rounded-0 mx-auto"
+                        <div class="form-group col-7 mx-auto mt-3">
+                            <input type="email" name="username" id="susername" class="form-control input-text mx-auto"
                                 pattern="[A-Za-z0-9._-]*@[A-Za-z0-9]*\.[A-Za-z0-9.]*" autocomplete="off" required>
                             <span id="textusername" class="form-control-placeholder" for="floor"
                                 onclick="clicksusername()">USERNAME</span>
                         </div>
                     </div>
 
-                    <div id="susernameValid" style="font-size: 11.5px; margin-left: 25px; padding-right: 0px; margin-top: 0px !important;
-            margin-bottom: 0px !important;" class="col-10 mt-2 text-sgl-success mb-2 text-danger d-none">
+                    <div id="susernameValid" style="font-size: 11.5px; margin-left: 125px; padding-right: 0px; margin-top: 0px !important;
+                    margin-bottom: 0px !important;" class="col-10 mt-2 text-sgl-success mb-2 text-danger d-none">
                         Please fill email. Example : example@example.com
                     </div>
                     <div class="row justify-content-md-center">
-                        <div class="form-group col-10 mx-auto mt-3" style="margin-bottom: 0px">
+                        <div class="form-group col-7 mx-auto mt-3" style="margin-bottom: 0px">
 
                             <input type="password" name="password" id="spassword" onkeypress="capLock(event)"
-                                class="form-control rounded-0" minlength="1" maxlength="20" autocomplete="off" required>
+                                class="form-control input-text" minlength="1" maxlength="20" autocomplete="off"
+                                required>
                             <span id="textspassword" class="form-control-placeholder" for="floor"
                                 onclick="clickspassword()">PASSWORD</span>
                             <span toggle="#spassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
@@ -68,61 +79,40 @@
                     </div>
 
                     <div class="row justify-content-md-center">
-                        <div class=" col-9 text-lg mx-auto text-right mt-2" id='btn_forgot'><a href="#"
-                                onclick="getForm('forgot')" class="text-sgl-success text-decoration-none">Forgot your
-                                password
-                                ?</a>
+                        <div class=" col-7 text-lg mx-auto mt-2" id='btn_forgot'>
+                            <div class="row row-forgot">
+                                <div class="pb-1">
+                                    <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe"
+                                        class="remember-style">Remember me</label>
+                                </div>
+
+                                <a href="#" onclick="getForm('forgot')"
+                                    class="text-sgl-success text-decoration-none forgot-style">Forgot password?</a>
+                            </div>
                         </div>
                     </div>
-                    <!-- </div> -->
+
                     <div class="row justify-content-md-center">
                         <div class="col-4 mx-auto mt-3">
                             <button id="bsing_in" onclick="getLogin();" type="button"
-                                class="btn btn-block btn-sgl-success rounded-0 text-lg">SIGN IN</button>
+                                class="btn btn-block btn-sgl-success btn-login">Login</button>
                         </div>
                     </div>
-                    <% } %>
-                        <% } %>
+                    <div class="row justify-content-md-center">
+                        <div class="col-5 mx-auto mt-3 btn-sign-up">
+                            Don't have an account ? <a href="#" onclick="getForm('register')" class="text-sgl-success "
+                                id='btn_register'>Sign Up
+                            </a>
+                        </div>
+                    </div>
 
-                            <% for (const channel of appChannels) { %>
-                                <% if ('social_fb' in channel || 'social_line' in channel || 'social_google' in channel)
-                                    { %>
-                                    <div class="txthead"><label class="textinline">Or</label></div>
-                                    <div class="row justify-content-md-center">
-                                        <label class="mx-auto">Log in with</label>
-                                    </div>
-                                    <% break;} %>
-                                        <% } %>
-                                            <div class="row justify-content-md-center">
-                                                <ul class="connect_register mx-auto">
-                                                    <% for (const channel of appChannels) { %>
-                                                        <% if ('social_fb' in channel) { %>
-                                                            <li class="thumbnail"><a href="#"
-                                                                    onclick="facebookLogin('<%= channel.social_fb.app_id %>', '<%= channel.social_fb.scope_permission %>', '<%= policy %>', '<%= redirectURI %>', '<%= isNativeApp %>')"><img
-                                                                        src="/images/icon/facebook.png" alt=""></a></li>
-                                                            <% } else if ('social_line' in channel) { %>
-                                                                <li class="thumbnail"><a href="#"
-                                                                        onclick="lineLogin('<%= channel.social_line.channel_id %>', '<%= channel.social_line.scope_permission %>', '<%= policy %>', '<%= redirectURI %>', '<%= isNativeApp %>')"><img
-                                                                            src="/images/icon/line.png" alt=""></a></li>
-                                                                <% } else if ('social_google' in channel) { %>
-                                                                    <li class="thumbnail"><a href="#"
-                                                                            onclick="googleLogin('<%= channel.social_google.client_id %>', '<%= channel.social_google.scope_permission %>', '<%= policy %>', '<%= redirectURI %>', '<%= isNativeApp %>')"><img
-                                                                                src="/images/icon/google-plus.png"
-                                                                                alt=""></a></li>
-                                                                    <% } %>
-                                                                        <% } %>
-                                                </ul>
-                                            </div>
-                                            <div class="row pl-5 mt-1 mb-3">
-                                                <div class="col-7 text-left text-lg mt-3">
-                                                    New member? <a href="#" onclick="getForm('register')"
-                                                        class="text-sgl-success text-decoration-none"
-                                                        id='btn_register'>Register
-                                                    </a> here.
-                                                </div>
-                                            </div>
 
-        </form>
+                </form>
+            </div>
+            <div class="col-1"></div>
+        </div>
+
+
     </div>
 
     <!-- END Login from -->
@@ -268,7 +258,8 @@
 
                         </div>
                         <div class="col-6 "><button id="btn-done" type="button" onclick="getRegisteration();"
-                                class="btn btn-block btn-sgl-success rounded-0 text-lg" disabled>DONE</button></div>
+                                class="btn btn-block btn-sgl-success rounded-0 text-lg" disabled>DONE</button>
+                        </div>
                     </div>
                     <div class="row pr-5 pl-5 pb-4">
                         <div class="col-9 text-lg">
@@ -295,14 +286,7 @@
     <script src="https://www.google.com/recaptcha/api.js?render=<%= site_key %>"></script>
 
 
-    <!-- <script src="script/js/jquery-3.3.1.min.js"></script>
-    <script src="script/js/popper.min.js" ></script>
-    <script src="script/js/bootstrap.min.js" ></script>
-    <script src="script/js/emailpassword.js" ></script>
-    <script src="script/sweetalert2-8.17.4/package/dist/sweetalert2.min.js" ></script>
-    <script src="script/js/facebookLogin.js" ></script>
-    <script src="script/js/lineLogin.js" ></script>
-    <script src="script/js/googleLogin.js"></script> -->
+
     <script>
         $(document).ready(function () {
 
@@ -310,6 +294,16 @@
                 checkPublicID('<%= policy %>', '<%= clientId %>')
             })
         })
+
+        const rm = document.getElementById('rememberMe');
+        var userName = document.getElementById('susername');
+        if (localStorage.checkbox && localStorage.checkbox !== "") {
+            rm.setAttribute("checked", "checked");
+            userName.value = localStorage.username;
+        } else {
+            rm.removeAttribute("checked");
+            userName.value = "";
+        }
 
         getRegisteration = function () {
             if ('<%= site_key %>' !== '') {
@@ -323,6 +317,16 @@
             }
         }
         getLogin = function () {
+
+            if (rm.checked && userName.value !== "") {
+                localStorage.username = userName.value;
+                localStorage.checkbox = rm.value;
+            } else {
+                localStorage.username = "";
+                localStorage.checkbox = "";
+            }
+
+
             if ('<%= site_key %>' !== '') {
                 var formRegister = document.getElementById('register')
                 grecaptcha.execute('<%= site_key %>', { action: 'email_password_login' }).then(function (token) {
