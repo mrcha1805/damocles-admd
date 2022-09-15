@@ -5,19 +5,19 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/x-icon" href="/auth31/aiauthen/images/icon/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/icon/favicon.ico">
     <title>ADMDV3</title>
     <!-- Bootstrap CSS -->
     <!-- css -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/auth31/aiauthen/script/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="/auth31/aiauthen/script/css/style-c.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="/auth31/aiauthen/script/css/login.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="/auth31/aiauthen/script/sweetalert2-8.17.4/package/dist/sweetalert2.min.css"
+    <link rel="stylesheet" href="/script/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/script/css/style-c.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/script/css/login.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/script/sweetalert2-8.17.4/package/dist/sweetalert2.min.css"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="/auth31/aiauthen/script/font-awesome-4.7.0/css/font-awesome.min.css"
+    <link rel="stylesheet" href="/script/font-awesome-4.7.0/css/font-awesome.min.css"
         crossorigin="anonymous">
 
 
@@ -31,13 +31,13 @@
 
     <div class="content-login" style="display: block" id="form-sign">
         <div class="nav-logo ">
-            <img class="login-logo" src="/auth31/aiauthen/images/loginDI/login-logo.svg">
+            <img class="login-logo" src="/images/loginDI/login-logo.svg">
 
         </div>
         <div class="row">
             <div class="col-2"></div>
             <div class="col-4" style="text-align: center;">
-                <img class="damocles-logo" src="/auth31/aiauthen/images/loginDI/damocles-logo.svg">
+                <img class="damocles-logo" src="/images/loginDI/damocles-logo.svg">
             </div>
             <div class="col-5 col-login mt-4 ">
                 <form action="" id="login" method="post" autocomplete="off">
@@ -55,11 +55,9 @@
 
 
                     <div class="row justify-content-md-center">
-                        <div class="form-group col-7 mx-auto mt-3">
-                            <input type="email" name="username" id="susername" class="form-control input-text mx-auto"
+                        <div class="form-group col-10 mx-auto mt-3">
+                            <input type="email" name="username" id="susername" placeholder="Username" class="form-control input-text mx-auto"
                                 pattern="[A-Za-z0-9._-]*@[A-Za-z0-9]*\.[A-Za-z0-9.]*" autocomplete="off" required>
-                            <span id="textusername" class="form-control-placeholder" for="floor"
-                                onclick="clicksusername()">USERNAME</span>
                         </div>
                     </div>
 
@@ -68,20 +66,18 @@
                         Please fill email. Example : example@example.com
                     </div>
                     <div class="row justify-content-md-center">
-                        <div class="form-group col-7 mx-auto mt-3" style="margin-bottom: 0px">
+                        <div class="form-group col-10 mx-auto mt-3" style="margin-bottom: 0px">
 
-                            <input type="password" name="password" id="spassword" onkeypress="capLock(event)"
-                                class="form-control input-text" minlength="1" maxlength="20" autocomplete="off"
+                            <input type="password" name="password" id="spassword" placeholder="Password" onkeypress="capLock(event)"
+                                class="form-control input-text mx-auto" minlength="1" maxlength="20" autocomplete="off"
                                 required>
-                            <span id="textspassword" class="form-control-placeholder" for="floor"
-                                onclick="clickspassword()">PASSWORD</span>
                             <span toggle="#spassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
 
                         </div>
                     </div>
 
                     <div class="row justify-content-md-center">
-                        <div class=" col-7 text-lg mx-auto mt-2" id='btn_forgot'>
+                        <div class=" col-9 text-lg mx-auto mt-2" id='btn_forgot'>
                             <div class="row row-forgot">
                                 <div class="pb-1">
                                     <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe"
@@ -277,15 +273,15 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="/auth31/aiauthen/script/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-    <script src="/auth31/aiauthen/script/js/popper.min.js" crossorigin="anonymous"></script>
-    <script src="/auth31/aiauthen/script/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script src="/auth31/aiauthen/script/js/emailpassword.js" crossorigin="anonymous"></script>
-    <script src="/auth31/aiauthen/script/sweetalert2-8.17.4/package/dist/sweetalert2.min.js"
+    <script src="/script/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="/script/js/popper.min.js" crossorigin="anonymous"></script>
+    <script src="/script/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="/script/js/emailpassword.js" crossorigin="anonymous"></script>
+    <script src="/script/sweetalert2-8.17.4/package/dist/sweetalert2.min.js"
         crossorigin="anonymous"></script>
-    <script src="/auth31/aiauthen/script/js/facebookLogin.js" crossorigin="anonymous"></script>
-    <script src="/auth31/aiauthen/script/js/lineLogin.js" crossorigin="anonymous"></script>
-    <script src="/auth31/aiauthen/script/js/googleLogin.js" crossorigin="anonymous"></script>
+    <script src="/script/js/facebookLogin.js" crossorigin="anonymous"></script>
+    <script src="/script/js/lineLogin.js" crossorigin="anonymous"></script>
+    <script src="/script/js/googleLogin.js" crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js?render=<%= site_key %>"></script>
 
 

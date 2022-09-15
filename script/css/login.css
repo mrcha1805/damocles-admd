@@ -21,9 +21,9 @@
   margin: 30px 0 0 30px;
 }
 .damocles-logo {
-  width: 293px;
-  height: 250px;
-  margin-top: 100px;
+  width: 233.68px;
+  height: 200px;
+  margin-top: 150px;
 }
 /* 
 .container-login {
@@ -62,6 +62,8 @@
   color: #9a9a9a;
 }
 .input-text {
+  width: 460px;
+  height: 55px;
   box-sizing: border-box;
   border: 1px solid #808080;
   border-radius: 5px;
