@@ -127,6 +127,9 @@
   line-height: 19px;
   color: #000000;
 }
+#rememberMe{
+  accent-color: #676767;
+}
 .forgot-style {
   font-family: DB Heavent Reg !important;
   font-style: normal;
