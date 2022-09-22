@@ -17,43 +17,33 @@
     <link rel="stylesheet" href="/script/css/login.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/script/sweetalert2-8.17.4/package/dist/sweetalert2.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/script/font-awesome-4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-
-
-
 </head>
 
 <body>
-
-
     <!-- START Login from -->
-
     <div class="content-login" style="display: block" id="form-sign">
         <div class="nav-logo ">
             <img class="login-logo" src="/images/loginDI/login-logo.svg">
-
         </div>
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-4" style="text-align: center;">
+
+        <div class="container row login">
+            <div class="col-sm-12 col-lg-6 order-sm-1 order-lg-1" style="text-align: center;">
                 <img class="damocles-logo" src="/images/loginDI/damocles-logo.svg">
             </div>
-            <div class="col-5 col-login mt-4 ">
+            <div class="col-sm-12 col-lg-6 order-sm-2 order-lg-2">
                 <form action="" id="login" method="post" autocomplete="off">
                     <div class="row justify-content-md-center">
                         <label class="header1  mx-auto mt-4">Welcome to</label>
-
                     </div>
-                    <div class="row justify-content-md-center">
+                    <div class="row justify-content-md-center" style="text-align: center;">
                         <label class="header2 mx-auto">Actionable <span style="color:#491DC5">Insight</span></label>
                     </div>
                     <div class="row justify-content-md-center">
                         <label class="header3 mx-auto">Login to continue to customer insight data.</label>
                     </div>
 
-
-
                     <div class="row justify-content-md-center">
-                        <div class="form-group col-10 mx-auto mt-3">
+                        <div class="form-group col-md-12 col-lg-10 mx-auto mt-3">
                             <input type="email" name="username" id="susername" placeholder="Username"
                                 class="form-control input-text mx-auto"
                                 pattern="[A-Za-z0-9._-]*@[A-Za-z0-9]*\.[A-Za-z0-9.]*" autocomplete="off" required>
@@ -65,18 +55,16 @@
                         Please fill email. Example : example@example.com
                     </div>
                     <div class="row justify-content-md-center">
-                        <div class="form-group col-10 mx-auto mt-3" style="margin-bottom: 0px">
-
+                        <div class="form-group col-md-12 col-lg-10 mx-auto mt-3" style="margin-bottom: 0px">
                             <input type="password" name="password" id="spassword" placeholder="Password"
                                 onkeypress="capLock(event)" class="form-control input-text mx-auto" minlength="1"
                                 maxlength="20" autocomplete="off" required>
                             <span toggle="#spassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
-
                         </div>
                     </div>
 
                     <div class="row justify-content-md-center">
-                        <div class=" col-9 text-lg mx-auto mt-2" id='btn_forgot'>
+                        <div class="col-sm-11 col-lg-9 text-lg mx-auto mt-2" id='btn_forgot'>
                             <div class="row row-forgot">
                                 <div class="form-check">
                                     <input class="form-check-input remember-style" type="checkbox" value="lsRememberMe"
@@ -100,20 +88,14 @@
                     <div class="row">
                         <div class="col mx-auto p-0 mt-3 btn-sign-up d-flex justify-content-center">
                             Don't have an account ? <a href="#" onclick="getForm('register')" class="text-sgl-success "
-                                id='btn_register'>Sign Up
+                                id='btn_register'>&nbsp; Sign Up
                             </a>
                         </div>
                     </div>
-
-
                 </form>
             </div>
-            <div class="col-1"></div>
         </div>
-
-
     </div>
-
     <!-- END Login from -->
 
     <!-- START Forgot from -->
