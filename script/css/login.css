@@ -1,11 +1,11 @@
 @font-face {
   font-family: "DB Heavent Bd";
-  src: url("../../fonts/DB\ Heavent\ Bd\ Ext\ v3.2.ttf");
+  src: url("../../fonts/Heavent/DB_Heavent_Bd_v3.2.ttf");
 }
 
 @font-face {
   font-family: "DB Heavent Reg";
-  src: url("../../fonts/DB\ Heavent\ Ext\ v3.2.ttf");
+  src: url("../../fonts/Heavent/DB_Heavent_v3.2.ttf");
 }
 
 .nav-logo {
@@ -63,7 +63,7 @@
   color: #020202;
 }
 .header3 {
-  font-family: DB Heavent Bd !important;
+  font-family: DB Heavent Reg !important;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -114,20 +114,20 @@
   padding-left: 23px;
 }
 .btn-sign-up a {
-  font-family: DB Heavent Bd !important;
+  font-family: DB Heavent Reg !important;
   line-height: 18px;
   color: #491dc5;
   text-decoration: underline;
 }
 .remember-style {
-  font-family: DB Heavent Bd !important;
+  font-family: DB Heavent Reg !important;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
 }
-#rememberMe{
+#rememberMe {
   accent-color: #676767;
 }
 .forgot-style {
